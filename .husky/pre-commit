@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+checked_file=$(find . -name "*.sh" ! -path "./node_modules/*" ! -path "./.husky/_/*")
+
+
+if ! pnpm exec autocorrect --fix  . ;then
+    echo "❌ autocorrect 检查失败，请修复上述问题后再提交"
+    exit 1
+fi
+
+# Shell 脚本格式化
+echo "正在格式化 shell 脚本..."
+# shellcheck disable=SC2086
+shfmt -w $checked_file
+if ! type shellcheck &> /dev/null || ! type shfmt &> /dev/null; then
+   echo "❌ 请先安装 shfmt 和 shellcheck"
+   exit 1
+fi
+
+
+
+# Shell 脚本静态检查
+echo "正在检查 shell 脚本语法..."
+
+# ! 这里的 --exclude=SC1091 是临时解决方案
+# shellcheck disable=SC2086
+if ! shellcheck --external-sources --exclude=SC1091 $checked_file; then
+    echo "❌ ShellCheck 检查失败，请修复上述问题后再提交"
+    exit 1
+fi
+
+# # 检查脚本文件权限
+
+# # shellcheck disable=SC2086
+# if chmod a+x $checked_file; then
+#     echo "✅ 已为所有脚本文件添加可执行权限"
+# else
+#     echo "❌ 无法为某些脚本文件添加可执行权限，请检查文件权限设置"
+#     exit 1
+# fi
+
+echo "✅ 所有检查通过，可以提交"

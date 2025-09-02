@@ -1,0 +1,32 @@
+{
+    "cSpell.words": [
+        "aliyun",
+        "autocorrect",
+        "autojump",
+        "cowsay",
+        "diffutils",
+        "direnv",
+        "fastfetch",
+        "figlet",
+        "filemode",
+        "ignorecase",
+        "itop",
+        "mirrorlist",
+        "netcat",
+        "nmap",
+        "noconfirm",
+        "pacman",
+        "plocate",
+        "powerlevel",
+        "qing",
+        "romkatv",
+        "shellcheck",
+        "shfmt",
+        "Syyu",
+        "Tiancong",
+        "zimfw",
+        "zimrc",
+        "zmodule"
+    ],
+    "files.autoSave": "afterDelay"
+}
