@@ -65,6 +65,8 @@ generate_packages=(
     pnpm
     yarn
 
+    # 数据库
+    postgresql
 )
 
 ############################## Arch Linux ##############################
