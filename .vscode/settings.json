@@ -11,6 +11,7 @@
         "filemode",
         "ignorecase",
         "itop",
+        "libaio",
         "mirrorlist",
         "netcat",
         "nmap",

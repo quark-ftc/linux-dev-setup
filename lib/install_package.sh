@@ -41,7 +41,7 @@ generate_packages=(
     diffutils
     unzip
     # telnet
-    gnu-netcat
+    # gnu-netcat
     nmap
     # itop
     # dig
@@ -67,6 +67,9 @@ generate_packages=(
 
     # 数据库
     postgresql
+
+    # 其他依赖
+    libaio
 )
 
 ############################## Arch Linux ##############################
