@@ -61,6 +61,9 @@ generate_packages=(
     clang
     gcc
 
+    # rust
+    rustup
+
     # nodejs
     pnpm
     yarn
