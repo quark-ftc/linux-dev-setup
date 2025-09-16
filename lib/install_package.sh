@@ -70,6 +70,7 @@ generate_packages=(
 
     # 其他依赖
     libaio
+    base-devel
 )
 
 ############################## Arch Linux ##############################
