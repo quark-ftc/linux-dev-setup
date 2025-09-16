@@ -48,6 +48,10 @@ generate_packages=(
     fastfetch
     openssh
 
+    # 网络工具
+    net-tools
+    inetutils
+
     # ASCII 艺术与终端玩具
     lolcat
     cowsay
