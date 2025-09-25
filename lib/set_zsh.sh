@@ -67,12 +67,12 @@ function install_powerlevel10k_by_zim() {
     if ! grep -q 'zmodule romkatv/powerlevel10k' "$zimrc_path"; then
         cat >>"$zimrc_path" <<EOF
 
-############################## 由于 ftc 的初始化脚本插入 ##############################
+############################## 由 linux_dev_setup 插入的初始化脚本  ##############################
 
 # powerlevel10k
 zmodule romkatv/powerlevel10k
 
-############################## 由于 ftc 的初始化脚本插入 ##############################
+############################## 由 linux_dev_setup 插入的初始化脚本  ##############################
 EOF
     fi
 
